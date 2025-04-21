@@ -8,9 +8,11 @@ import netlify from "@astrojs/netlify";
 // https://astro.build/config
 export default defineConfig({
   devToolbar: {
-    enabled: false
+    enabled: false,
   },
-  integrations: [tailwind(), react(), db()],
+  // integrations: [tailwind(), react(), db()],
+  integrations: [tailwind(), react()],
+
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
 });
